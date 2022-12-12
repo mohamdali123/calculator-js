@@ -115,12 +115,12 @@ deleteButton.addEventListener("click", (button) => {
   calculator.delete();
   calculator.updateDisplay();
 });
-deleteButton.addEventListener("click", (button) => {
-  calculator.delete();
-  calculator.updateDisplay();
-});
 signButton.addEventListener("click", (button) => {
   calculator.sign();
+  calculator.updateDisplay();
+});
+percentButton.addEventListener("click", (button) => {
+  calculator.percent();
   calculator.updateDisplay();
 });
 document.addEventListener("keypress", (event) => {
@@ -132,6 +132,10 @@ document.addEventListener("keypress", (event) => {
   }
   if (event.key === ".") {
     calculator.appendNumber(event.key);
+    calculator.updateDisplay();
+  }
+  if (event.key === "%") {
+    calculator.percent(event.key);
     calculator.updateDisplay();
   }
   if (event.key.match(listOperators)) {
