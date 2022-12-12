@@ -1,0 +1,83 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background: linear-gradient(to right, #39a0ca, #161748);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.container {
+    width: 400px;
+    margin: auto;
+    min-height: 400px;
+    box-shadow: 0 8px 50px -7px black;
+    border-style: solid;
+    border-radius: 10px;
+    background: #12343b;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    padding: 1px;
+
+}
+
+.container>button {
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.3rem;
+    border-color: #12343b;
+    border-style: solid;
+    border-width: 1px 1px 0px 0;
+    border-radius: 5px;
+}
+
+.container button:active {
+    opacity: 0.65;
+}
+
+.display {
+    grid-column: 1 / -1;
+    background-color: #c89666;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-style: solid;
+    border-width: 1px 1px 0px 0;
+    border-radius: 5px;
+}
+
+.displaySmall {
+    font-size: 1.5rem;
+}
+
+.displayBig {
+    font-size: 2.5rem;
+}
+
+.operator,
+.equals {
+    background: #4f5f76;
+}
+
+.number,
+.clearOne {
+    background: #2d545e;
+}
+
+.percent,
+.clear,
+.sign {
+    background: #0f2862;
+}
+
+h3 {
+    text-align: center;
+}
